@@ -290,8 +290,13 @@ label:active::after {
 .dark .followers-count,
 .dark .section-title,
 .dark .header-title > h1,
+.dark .attribution,
 .dark .overview-reach > h4 {
   color: var(--WhiteText);
+}
+
+.dark .attribution > a {
+  color: var(--LimeGreen);
 }
 
 html.transition,
