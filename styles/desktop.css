@@ -1,0 +1,60 @@
+@media screen and (min-width: 60rem) {
+  .dashboard-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header-content-container {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 2.625rem 0;
+  }
+
+  .header-title > h1 {
+    font-size: 2rem;
+  }
+
+  .header-title > p {
+    padding: 0.3rem 0 0 0;
+  }
+
+  .dark-mode-container {
+    border: none;
+    margin-right: 1.8rem;
+  }
+
+  .dark-mode-container > h5 {
+    padding-right: 1rem;
+  }
+
+  .followers-details {
+    margin-top: -6.875rem;
+  }
+
+  .followers-details,
+  .followers-details-overview {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 20%;
+    height: 13rem;
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+
+  .section-title {
+    padding: 1.5rem 0 1.8rem 5.2rem;
+  }
+
+  .overview-card {
+    width: 20%;
+    margin-right: 30px;
+    margin-bottom: 25px;
+  }
+}

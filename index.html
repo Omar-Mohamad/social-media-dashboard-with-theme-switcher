@@ -6,7 +6,8 @@
     <!-- displays site properly based on user's device -->
 
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/desktop.css" />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -25,11 +26,299 @@
     <title>Frontend Mentor | Social media dashboard</title>
   </head>
   <body>
-    Social Media Dashboard Total Followers: 23,004 Dark Mode @nathanf 1987
-    Followers 12 Today @nathanf 1044 Followers 99 Today @realnathanf 11k
-    Followers 1099 Today Nathan F. 8239 Subscribers 144 Today Overview - Today
-    Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views 52k 1375%
-    Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407 12%
+    <header class="dashboard-header">
+      <div class="header-content-container">
+        <div class="header-title">
+          <h1>Social Media Dashboard</h1>
+
+          <p>Total Followers: 23,004</p>
+        </div>
+
+        <div class="dark-mode-container">
+          <h5>Dark Mode</h5>
+          <input type="checkbox" name="switcher" id="switcher" />
+          <label for="switcher"></label>
+        </div>
+      </div>
+    </header>
+
+    <section class="followers-details">
+      <!-- Facebook -->
+
+      <article class="card facebook">
+        <header>
+          <img
+            src="images/icon-facebook.svg"
+            alt="facebook logo"
+            class="logo"
+          />
+
+          <h6 class="account-name">@nathanf</h6>
+        </header>
+
+        <h2 class="followers-count">1987 <span> Followers </span></h2>
+
+        <footer>
+          <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+          <p class="reach-condition increased">12 Today</p>
+        </footer>
+      </article>
+
+      <!-- Twitter -->
+
+      <article class="card twitter">
+        <header>
+          <img src="images/icon-twitter.svg" alt="twitter logo" class="logo" />
+
+          <h6 class="account-name">@nathanf</h6>
+        </header>
+
+        <h2 class="followers-count">1044 <span>Followers</span></h2>
+
+        <footer>
+          <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+          <p class="reach-condition increased">99 Today</p>
+        </footer>
+      </article>
+
+      <!-- Instagram -->
+
+      <article class="card instagram">
+        <header>
+          <img
+            src="images/icon-instagram.svg"
+            alt="instagram logo"
+            class="logo"
+          />
+
+          <h6 class="account-name">@realnathanf</h6>
+        </header>
+
+        <h2 class="followers-count">11k<span>Followers</span></h2>
+
+        <footer>
+          <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+          <p class="reach-condition increased">1099 Today</p>
+        </footer>
+      </article>
+
+      <!-- Youtube -->
+
+      <article class="card youtube">
+        <header>
+          <img src="images/icon-youtube.svg" alt="youtube logo" class="logo" />
+
+          <h6 class="account-name">Nathan F.</h6>
+        </header>
+
+        <h2 class="followers-count">8239 <span>Subscribers</span></h2>
+
+        <footer>
+          <img src="images/icon-down.svg" alt="down arrow" class="arrow" />
+
+          <p class="reach-condition decreased">144 Today</p>
+        </footer>
+      </article>
+    </section>
+
+    <h1 class="section-title">Overview - Today</h1>
+
+    <section class="followers-details-overview">
+      <!-- Facebook page views -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Page Views</h5>
+
+          <img
+            src="images/icon-facebook.svg"
+            alt="facebook logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>87</h4>
+
+          <div class="reach">
+            <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+            <p class="increased">3%</p>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Facebook likes -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Likes</h5>
+
+          <img
+            src="images/icon-facebook.svg"
+            alt="facebook logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>52</h4>
+
+          <div class="reach">
+            <img src="images/icon-down.svg" alt="down arrow" class="arrow" />
+
+            <p class="decreased">2%</p>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Instagram likes -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Likes</h5>
+
+          <img
+            src="images/icon-instagram.svg"
+            alt="instagram logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>5462</h4>
+
+          <div class="reach">
+            <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+            <p class="increased">2257%</p>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Instagram profile views -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Profile Views</h5>
+
+          <img
+            src="images/icon-instagram.svg"
+            alt="instagram logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>52k</h4>
+
+          <div class="reach">
+            <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+            <p class="increased">1375%</p>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Twitter retweets -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Retweets</h5>
+
+          <img
+            src="images/icon-twitter.svg"
+            alt="instagram logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>117</h4>
+
+          <div class="reach">
+            <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+            <p class="increased">303%</p>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Twitter likes -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Likes</h5>
+
+          <img
+            src="images/icon-twitter.svg"
+            alt="instagram logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>507</h4>
+
+          <div class="reach">
+            <img src="images/icon-up.svg" alt="up arrow" class="arrow" />
+
+            <p class="increased">553%</p>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Youtube likes -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Likes</h5>
+
+          <img
+            src="images/icon-youtube.svg"
+            alt="instagram logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>107</h4>
+
+          <div class="reach">
+            <img src="images/icon-down.svg" alt="down arrow" class="arrow" />
+
+            <p class="decreased">19%</p>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Youtube views -->
+
+      <article class="overview-card">
+        <header>
+          <h5>Total Views</h5>
+
+          <img
+            src="images/icon-youtube.svg"
+            alt="instagram logo"
+            class="logo"
+          />
+        </header>
+
+        <footer class="overview-reach">
+          <h4>1407</h4>
+
+          <div class="reach">
+            <img src="images/icon-down.svg" alt="down arrow" class="arrow" />
+
+            <p class="decreased">12%</p>
+          </div>
+        </footer>
+      </article>
+    </section>
 
     <!-- <div class="attribution">
       Challenge by
@@ -37,5 +326,8 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+
+    <!-- Javascript -->
+    <script src="app.js"></script>
   </body>
 </html>

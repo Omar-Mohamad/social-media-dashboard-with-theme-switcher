@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter;
+}
+
+:root {
+  /* ### Primary */
+
+  --LimeGreen: hsl(163, 72%, 41%);
+  --BrightRed: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+
+  /* #### Dark Theme */
+
+  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+  /* #### Light Theme */
+
+  --Togglelight: hsl(230, 22%, 74%);
+
+  /* ### Neutral */
+
+  /* #### Dark Theme */
+
+  --VeryDarkBlueBG: hsl(230, 17%, 14%);
+  --VeryDarkBlueTopBGPattern: hsl(232, 19%, 15%);
+  --DarkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+  --DesaturatedBlueText: hsl(228, 34%, 66%);
+  --WhiteText: hsl(0, 0%, 100%);
+
+  /* #### Light Theme */
+
+  --WhiteBG: hsl(0, 0%, 100%);
+  --VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+  --LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+  --DarkGrayishBlueText: hsl(228, 12%, 44%);
+  --VeryDarkBlueText: hsl(230, 17%, 14%);
+}
+
+/* Dashboard header */
+
+.header-content-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 15.3rem;
+  background-color: var(--VeryPaleBlueTopBGPattern);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.header-title > h1 {
+  font-size: 1.5rem;
+  color: var(--VeryDarkBlueText);
+}
+
+.header-title > p {
+  font-weight: 400;
+  color: var(--DarkGrayishBlueText);
+  padding: 0.3rem 0 1rem 0;
+}
+
+.dark-mode-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid var(--DarkGrayishBlueText);
+}
+
+.dark-mode-container > h5 {
+  font-weight: 700;
+  color: var(--DarkGrayishBlueText);
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: var(--Togglelight);
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--Toggle);
+}
+
+input:checked + label::after {
+  right: calc(100% - 5px);
+  transform: translateX(100%);
+}
+
+label:active::after {
+  width: 45px;
+}
+
+/* Followers count section */
+
+.followers-details {
+  margin-top: -4.3rem;
+}
+
+.followers-details,
+.followers-details-overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 210px;
+  margin-bottom: 20px;
+  background-color: var(--LightGrayishBlueCardBG);
+  border-radius: 5px;
+}
+
+.card > header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 0.5rem;
+}
+
+.account-name {
+  font-size: 0.875rem;
+  color: var(--DarkGrayishBlueText);
+}
+
+.followers-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.8rem;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem 0 1.5rem 0;
+  color: var(--VeryDarkBlueText);
+}
+
+.followers-count > span {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--DarkGrayishBlueText);
+}
+
+.card > footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 700;
+}
+
+.arrow {
+  padding-right: 0.5rem;
+}
+
+.increased {
+  color: var(--LimeGreen);
+}
+
+.decreased {
+  color: var(--BrightRed);
+}
+
+.facebook {
+  border-top: 4.5px solid var(--Facebook);
+}
+.twitter {
+  border-top: 4.5px solid var(--Twitter);
+}
+.instagram {
+  border: 4.5px solid;
+  border-image-slice: 1;
+  border-image-source: var(--Instagram);
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+.youtube {
+  border-top: 4.5px solid var(--YouTube);
+}
+
+/* Overview section */
+
+.section-title {
+  padding: 1.8rem 0 1.8rem 1.5rem;
+  font-weight: 700;
+  color: var(--DarkGrayishBlueText);
+}
+
+.overview-card {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 1.5rem;
+  background-color: var(--LightGrayishBlueCardBG);
+  border-radius: 10px;
+}
+
+.overview-card > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.overview-card > header > h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--DarkGrayishBlueText);
+}
+
+.overview-reach {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.overview-reach > h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--VeryDarkBlueText);
+}
+
+.reach {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Dark theme */
+
+.dark .dashboard-header {
+  background-color: var(--VeryDarkBlueTopBGPattern);
+}
+
+.dark .overview-card,
+.dark .card {
+  background-color: var(--DarkDesaturatedBlueCardBG);
+}
+.dark .followers-count,
+.dark .section-title,
+.dark .header-title > h1,
+.dark .overview-reach > h4 {
+  color: var(--WhiteText);
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 0.3s !important;
+  transition-delay: all 0.3s !important;
+}
