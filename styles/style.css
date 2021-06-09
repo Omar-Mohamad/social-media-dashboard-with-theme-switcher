@@ -301,3 +301,13 @@ html.transition *::after {
   transition: all 0.3s !important;
   transition-delay: all 0.3s !important;
 }
+
+.attribution {
+  padding: 48px;
+  text-align: center;
+}
+
+.attribution > a {
+  text-decoration: none;
+  color: var(--BrightRed);
+}
